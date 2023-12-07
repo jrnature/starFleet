@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "starFleet_backend": {
+      "main": "src/starFleet_backend/main.mo",
+      "type": "motoko"
+    },
+    "starFleet_frontend": {
+      "dependencies": [
+        "starFleet_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/starFleet_frontend/src/index.html"
+      },
+      "source": [
+        "src/starFleet_frontend/assets",
+        "dist/starFleet_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
